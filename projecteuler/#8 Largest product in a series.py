@@ -20,11 +20,11 @@ num = "73167176531330624919225119674426574742355349194934\
 71636269561882670428252483600823257530420752963450\
 "
 
-def peuler(n):
+def peuler(myinput, n):
 
     index1 = 0
     mymax = 0
-    while index1 < 987:
+    while index1 < len(myinput) - n:
         list1 = num[index1:index1+n]
 
         x = 1
@@ -37,4 +37,5 @@ def peuler(n):
         index1 += 1
     return mymax
 
-print(peuler(13))
+value = int(input("Please write down a number: "))
+print(peuler(num, value))
